@@ -19,9 +19,7 @@ Sprint2
 
 8:  java -cp target/team-u-1.0-SNAPSHOT.jar com.mycompany.app.App will print out "hello world"!
 
-
-SPRING
-======
+next:
 
 1: git clone: https://github.com/spring-guides/gs-serving-web-content.git
 

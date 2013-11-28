@@ -19,4 +19,14 @@ Sprint2
 
 8:  java -cp target/team-u-1.0-SNAPSHOT.jar com.mycompany.app.App will print out "hello world"!
 
-9:  
+
+SPRING
+======
+
+1: git clone: https://github.com/spring-guides/gs-serving-web-content.git
+
+2: cd into gs-serving-web-content/initial
+
+3: follow the rest of the tutorial http://spring.io/guides/gs/serving-web-content/#initial
+
+4: When trying to create the jar, type: java -jar target/gs-serving-web-content-0.1.0.jar --server.port=8081

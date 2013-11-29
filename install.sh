@@ -23,7 +23,7 @@ echo "export M2_HOME=$ROOT_DIR/$MAVEN_DIR" > $BOOTSTRAP_FILE
 echo "export M2=\$M2_HOME/bin" >> $BOOTSTRAP_FILE
 echo "export PATH=\$M2:\$PATH" >> $BOOTSTRAP_FILE
 echo "export JAVA_HOME=$JDK_DIR" >> $BOOTSTRAP_FILE
-echo "export PATH=$JAVA_HOME/bin:$PATH" >> $BOOTSTRAP_FILE
+echo "export PATH=\$JAVA_HOME/bin:\$PATH" >> $BOOTSTRAP_FILE
 
 
 echo "### Installing Spring Boot"

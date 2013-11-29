@@ -1,21 +1,20 @@
 Sprint2
 =======
 
-Download Maven 3.1.1: http://maven.apache.org/download.cgi#Installation
+# Installation
 
-Once installed, move into the PSD3-Protoype dir
+1. Clone the repository
 
-Go to, http://spring.io/guides/gs/serving-web-content/#initial
+2. Run the `install.sh` script
 
-In the PSD3-Prototype directory, create a new directory. Within this, create the directory structure as outlined in the spring website.
+# Usage
 
-in this directory type export PATH=$PATH:/users/level3/<STUDENTIDHERE>/PSD3-Prototype/apache-maven-3.1.1/bin
+1. Setup the environment:
+```bash
+source bootstrap.sh
+```
 
-Follow the rest of the tutorial outlined on the setup guide
-
-When trying to run the .jar, type java -jar target/gs-serving-web-content-0.1.0.jar --server.port=8081
-
-
-
-
-
+2. Run the application:
+```bash
+spring run app.groovy
+```

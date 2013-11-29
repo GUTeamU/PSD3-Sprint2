@@ -16,7 +16,12 @@ Sprint2
 source bootstrap.sh
 ```
 
-2. Run the application:
+2. Run the application on default port 8080:
 ```bash
 spring run app.groovy
 ```
+or custom port:
+```bash
+spring run app.groovy -- --server.port=8000
+```
+

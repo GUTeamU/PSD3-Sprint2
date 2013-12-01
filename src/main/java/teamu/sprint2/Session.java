@@ -19,7 +19,7 @@ public class Session {
                 return startDate;
         }
 
-        public void setDate(String startDate) {
+        public void setStartDate(String startDate) {
                 this.startDate = startDate;
         }
 
@@ -62,7 +62,6 @@ public class Session {
         public void setDuration(int duration) {
                 this.duration = duration;
         }
-        
 
         public int getRepeated() {
                 return repeated;

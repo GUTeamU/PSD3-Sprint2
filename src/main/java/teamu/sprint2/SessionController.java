@@ -2,6 +2,7 @@ package teamu.sprint2;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -32,7 +33,7 @@ public class SessionController {
     }
 
     @RequestMapping(value="/admin/sessions/create", method=RequestMethod.POST)
-    public String postCreateSession(@ModelAttribute("session") Session session) {
+    public String postCreateSession(@ModelAttribute("session") Session session, BindingResult result) {
         this.sessions.add(session);
         return "redirect:create";
     }

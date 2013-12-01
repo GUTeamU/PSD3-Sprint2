@@ -1,3 +1,5 @@
+package teamu.sprint2;
+
 public class Session {
         
         private String time;

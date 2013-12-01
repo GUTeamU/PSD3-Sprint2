@@ -1,3 +1,4 @@
 apache-maven*
 spring*
 bootstrap.sh
+target/*

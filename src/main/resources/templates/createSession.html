@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Session List</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<a href="sessions.html" th:href="@{'/admin/sessions'}">Back</a>
+<form action="createSession.html" th:attr="action=@{/admin/sessions/create}" method="POST">
+    <div>
+        <label for="time">Time: </label>
+        <input type="text" name="time" />
+    </div>
+    <div>
+        <label for="name">Name: </label>
+        <input type="text" name="name" />
+    </div>
+    <div>
+        <label for="lecturer">Lecturer: </label>
+        <input type="text" name="lecturer" />
+    </div>
+    <div>
+        <label for="compulsory">Compulsory: </label>
+        <input type="text" name="compulsory" />
+    </div>
+    <div>
+        <label for="venue">Venue: </label>
+        <input type="text" name="venue" />
+    </div>
+    <div>
+        <label for="startDate">startDate: </label>
+        <input type="text" name="startDate" />
+    </div>
+    <div>
+        <label for="endDate">endDate: </label>
+        <input type="text" name="endDate" />
+    </div>
+    <div>
+        <label for="duration">Duaration: </label>
+        <input type="int" name="duration" />
+    </div>
+    <div>
+        <label for="repeated">Repeated: </label>
+        <input type="int" name="repeated" />
+    </div>
+    <div>
+        <label for="maxCapacity">maxCapacity: </label>
+        <input type="int" name="maxCapacity" />
+    </div>
+
+    <input type="submit" value="Save" />
+</form>
+</body>
+</html>

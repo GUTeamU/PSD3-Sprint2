@@ -1,0 +1,6 @@
+Course_ID;Course_name;Start_date;End_date;Time;Duration;Repeated;Compulsory;Lecturer;Venue;Max_capacity
+1;PSD3;23/09/13;06/12/13;10:00:00;2;10;1;Jeremy Singer;Boyd-Orr 513;130
+2;ALG3;23/09/13;06/12/13;10:00:00;2;10;1;Gethin Norman;Boyd-Orr 513;130
+3;AP3;23/09/13;06/12/13;10:00:00;2;10;1;Joeseph Sventek;Boyd-Orr 513;130
+4;PL3;23/09/13;06/12/13;10:00:00;2;10;1;David Watt;Boyd-Orr 513;130
+5;IS3;23/09/13;06/12/13;10:00:00;2;10;1;Matthew Chalmers;Boyd-Orr 517;130

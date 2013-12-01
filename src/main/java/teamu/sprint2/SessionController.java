@@ -13,22 +13,19 @@ import java.util.ArrayList;
 
 @Controller
 public class SessionController {
+
+    private static final String SESSION_DATA = "Sessions.csv";
     
-    private List<Session> sessions;
+    private SessionList sessions;
     private List<User> users;
         
     public SessionController() {
-        sessions = new ArrayList<Session>();
-        for (String name : new String[]{"PSD3", "AP3", "PL3", "TP3", "IS3"}) {
-            Session s = new Session();
-            s.setName(name);
-            sessions.add(s);
-        }
+        this.sessions = new SessionList(SESSION_DATA);
     }
 
     @RequestMapping("/admin/sessions")
     public String sessionList(Model model) {
-        model.addAttribute("sessions", this.sessions);
+        model.addAttribute("sessions", this.sessions.getAll());
         return "sessions";
     }
 

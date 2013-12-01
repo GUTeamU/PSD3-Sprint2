@@ -24,9 +24,15 @@ mvn clean package
 source bootstrap.sh
 ```
 
-2. Run the application:
+2. Run the application on the default port (8080):
 ```bash
 java -jar target/gs-securing-web-0.1.0.jar
 ```
+or custom port (e.g. 8000):
+```bash
+java -jar target/gs-securing-web-0.1.0.jar --server.port=8000
+```
 
+3. Now you can access the admin interface via `http://localhost:8080/admin/sessions` and 
+the user interface via `http://localhost:8080/user/sessions?username=YOUR_USERNAME`.
 

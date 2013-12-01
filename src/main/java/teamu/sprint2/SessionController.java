@@ -29,12 +29,6 @@ public class SessionController {
         return "createSession";
     }
 
-    @RequestMapping("/admin/session")
-    public String session(@RequestParam(value="name") String name, Model model) {
-        model.addAttribute("name", name);
-        return "session";
-    }   
-
     @RequestMapping("/user/sessions")
     public String sessionList(@RequestParam(value="username") String username, Model model) {
         return "userSessions";

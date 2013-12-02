@@ -1,6 +1,16 @@
 Course_ID;Course_name;Start_date;End_date;Time;Duration;Repeated;Compulsory;Lecturer;Venue;Max_capacity
-1;PSD3;23/09/13;06/12/13;10:00:00;2;10;1;Jeremy Singer;Boyd-Orr 513;130
+1;PSD3 Week 1;30/09/13;30/09/13;14:00:00;2;10;1;Jeremy Singer;Boyd-Orr 513;130
+1;PSD3 Week 2;07/10/13;07/10/13;14:00:00;2;10;1;Jeremy Singer;Boyd-Orr 513;130
+1;PSD3 Week 3;14/10/13;14/10/13;14:00:00;2;10;1;Jeremy Singer;Boyd-Orr 513;130
+1;PSD3 Week 4;21/10/13;21/10/13;14:00:00;2;10;1;Jeremy Singer;Boyd-Orr 513;130
+1;PSD3 Week 5;28/10/13;28/10/13;14:00:00;2;10;1;Jeremy Singer;Boyd-Orr 513;130
+1;PSD3 Week 6;04/11/13;04/11/13;14:00:00;2;10;1;Jeremy Singer;Boyd-Orr 513;130
+1;PSD3 Week 7;11/11/13;11/11/13;14:00:00;2;10;1;Jeremy Singer;Boyd-Orr 513;130
+1;PSD3 Week 8;18/11/13;18/11/13;14:00:00;2;10;1;Jeremy Singer;Boyd-Orr 513;130
+1;PSD3 Week 9;25/11/13;25/11/13;14:00:00;2;10;1;Jeremy Singer;Boyd-Orr 513;130
+1;PSD3 Week 9;02/12/13;02/12/13;14:00:00;2;10;1;Jeremy Singer;Boyd-Orr 513;130
 2;ALG3;23/09/13;06/12/13;10:00:00;2;10;1;Gethin Norman;Boyd-Orr 513;130
+1;ALG3 Week 9;03/12/13;03/12/13;14:00:00;2;10;1;Jeremy Singer;Boyd-Orr 513;130
 3;AP3;23/09/13;06/12/13;10:00:00;2;10;1;Joeseph Sventek;Boyd-Orr 513;130
 4;PL3;23/09/13;06/12/13;10:00:00;2;10;1;David Watt;Boyd-Orr 513;130
 5;IS3;23/09/13;06/12/13;10:00:00;2;10;1;Matthew Chalmers;Boyd-Orr 517;130

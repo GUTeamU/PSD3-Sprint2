@@ -7,13 +7,13 @@
   <div class="starter-template">
     <ul class="nav nav-tabs">
       <li th:class="${filter == 'today'}? 'active'">
-      <a href="#" th:href="@{${url}(filter='today')}">Today</a>
+      <a href="#" th:href="@{${url}(username=${username}, filter='today')}">Today</a>
       </li>
       <li th:class="${filter == 'week'}? 'active'">
-      <a href="#" th:href="@{${url}(filter='week')}">This Week</a>
+      <a href="#" th:href="@{${url}(username=${username}, filter='week')}">This Week</a>
       </li>
       <li th:class="${filter == 'all'}? 'active'">
-      <a href="#" th:href="@{${url}(filter='all')}">All</a>
+      <a href="#" th:href="@{${url}(username=${username})}">All</a>
       </li>
     </ul>
     <table class="well table table-striped table-condensed table-hover">
@@ -26,7 +26,7 @@
         <th>Start Date</th>
         <th>End Date</th>
         <th>Duration</th>
-        <th>Reeated</th>
+        <th>Repeated</th>
         <th>Capacity</th>
       </tr>
       <tbody>

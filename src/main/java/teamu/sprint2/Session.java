@@ -1,26 +1,36 @@
 package teamu.sprint2;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.util.Date;
+import java.util.Locale;
+
 public class Session {
+
+    private static final DateFormat DATE = DateFormat.getDateInstance(DateFormat.SHORT, Locale.UK);
 
     private String time;
     private String name;
     private String lecturer;
     private String compulsory;
     private String venue;
-    private String startDate;
-    private String endDate;
+    private Date startDate;
+    private Date endDate;
 
     private int duration;
     private int repeated; //Again or boolean?
     private int maxCapacity;
 
 
-    public String getStartDate() {
+    public Date getStartDate() {
         return startDate;
     }
 
     public void setStartDate(String startDate) {
-        this.startDate = startDate;
+        try {
+            this.startDate = DATE.parse(startDate);
+        } catch (ParseException e) {
+        }
     }
 
     public String getTime() {
@@ -88,11 +98,13 @@ public class Session {
     }
 
     public void setEndDate(String endDate) {
-        this.endDate = endDate;
-
+        try {
+            this.endDate = DATE.parse(endDate);
+        } catch (ParseException e) {
+        }
     }
 
-    public String getEndDate() {
+    public Date getEndDate() {
         return endDate;
     }
 

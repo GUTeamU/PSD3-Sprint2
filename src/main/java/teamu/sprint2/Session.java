@@ -1,99 +1,99 @@
 package teamu.sprint2;
 
 public class Session {
-        
-        private String time;
-	private String name;
-        private String lecturer;
-        private String compulsory;
-        private String venue;
-        private String startDate;
-        private String endDate;
-        
-        private int duration;
-        private int repeated; //Again or boolean?
-        private int maxCapacity;
-        
-        
-        public String getStartDate() {
-                return startDate;
-        }
 
-        public void setStartDate(String startDate) {
-                this.startDate = startDate;
-        }
+    private String time;
+    private String name;
+    private String lecturer;
+    private String compulsory;
+    private String venue;
+    private String startDate;
+    private String endDate;
 
-        public String getTime() {
-                return time;
-        }
+    private int duration;
+    private int repeated; //Again or boolean?
+    private int maxCapacity;
 
-        public void setTime(String time) {
-                this.time = time;
-        }
 
-        public String getLecturer() {
-                return lecturer;
-        }
+    public String getStartDate() {
+        return startDate;
+    }
 
-        public void setLecturer(String lecturer) {
-                this.lecturer = lecturer;
-        }
+    public void setStartDate(String startDate) {
+        this.startDate = startDate;
+    }
 
-        public String getCompulsory() {
-                return compulsory;
-        }
+    public String getTime() {
+        return time;
+    }
 
-        public void setCompulsory(String compulsory) {
-                this.compulsory = compulsory;
-        }
+    public void setTime(String time) {
+        this.time = time;
+    }
 
-        public String getVenue() {
-                return venue;
-        }
+    public String getLecturer() {
+        return lecturer;
+    }
 
-        public void setVenue(String venue) {
-                this.venue = venue;
-        }
+    public void setLecturer(String lecturer) {
+        this.lecturer = lecturer;
+    }
 
-        public int getDuration() {
-                return duration;
-        }
+    public String getCompulsory() {
+        return compulsory;
+    }
 
-        public void setDuration(int duration) {
-                this.duration = duration;
-        }
+    public void setCompulsory(String compulsory) {
+        this.compulsory = compulsory;
+    }
 
-        public int getRepeated() {
-                return repeated;
-        }
+    public String getVenue() {
+        return venue;
+    }
 
-        public void setRepeated(int repeated) {
-                this.repeated = repeated;
-        }
+    public void setVenue(String venue) {
+        this.venue = venue;
+    }
 
-        public int getMaxCapacity() {
-                return maxCapacity;
-        }
+    public int getDuration() {
+        return duration;
+    }
 
-        public void setMaxCapacity(int maxCapacity) {
-                this.maxCapacity = maxCapacity;
-        }
+    public void setDuration(int duration) {
+        this.duration = duration;
+    }
 
-        public String getName() {
-                return name;
-        }
+    public int getRepeated() {
+        return repeated;
+    }
 
-        public void setName(String name) {
-                this.name = name;
-        }
+    public void setRepeated(int repeated) {
+        this.repeated = repeated;
+    }
 
-        public void setEndDate(String endDate) {
-                this.endDate = endDate;
-                
-        }
-        
-        public String getEndDate() {
-                return endDate;
-        }
-        
+    public int getMaxCapacity() {
+        return maxCapacity;
+    }
+
+    public void setMaxCapacity(int maxCapacity) {
+        this.maxCapacity = maxCapacity;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setEndDate(String endDate) {
+        this.endDate = endDate;
+
+    }
+
+    public String getEndDate() {
+        return endDate;
+    }
+
 }

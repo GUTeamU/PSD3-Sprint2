@@ -46,18 +46,14 @@ public class SessionController {
     public String sessionList(@RequestParam(value="username", required=false) String username, 
                               @RequestParam(value="filter", required=false) String filter, 
                               Model model) {
-        if(username != null && filter != null && users != null){
-            for(User u: users){
-                if(u.getName().equals(username)){
-                    List<Session> filtered = u.filter(filter);
-                    if(filtered != null){
-                        model.addAttribute("filter", filtered);
-                        return "userSessions";
-                    }
-                }
+        for(User u: users){
+            if(u.getName().equalsIgnoreCase(username)){
+                model.addAttribute("sessions", u.filter(filter));
+                model.addAttribute("username", u);
             }
         }
-        return "error";
+        model.addAttribute("filter", filter == null ? "all" : filter.toLowerCase());
+        return "userSessions";
     }
 
 

@@ -32,21 +32,17 @@ public class User {
 	}
 	
 	public List<Session> filter(String filter){
-		System.err.println("Filter begin");
-		if(filter.equals("All")){
-			System.err.println("All:" + all());
-			return all();
-		}
-		if(filter.equals("Week")){
-			System.err.println("Week: " + week());
-			return week();
-		}
-		if(filter.equals("Today")){
-			System.err.println("Today: " + daily());
-			return daily();
-		}
-		System.err.println("Null filter");
-		return null;
+        if (filter == null) {
+            filter = "";
+        }
+        switch(filter.toLowerCase()) {
+            case "week":
+                return week();
+            case "today":
+                return daily();
+            default:
+                return all();
+        }
 	}
 	
 	private List<Session> all(){

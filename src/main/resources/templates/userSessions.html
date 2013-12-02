@@ -1,13 +1,50 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-<title>Session List</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-</head>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: header"></head>
 <body>
-<a href="createSession.html" th:href="@{'/admin/sessions/create'}">Sessions</a>
-<ol th:each="s : ${filter}">
-  <li><a href="session.html" th:href="@{'/admin/session?name='+${s.name}}" th:text="${s.name}">ourse name</a></li>
-</ol>
+<div th:replace="layout :: navigation"></div>
+<div class="container">
+  <div class="starter-template">
+    <ul class="nav nav-tabs">
+      <li th:class="${filter == 'today'}? 'active'">
+      <a href="#" th:href="@{${url}(filter='today')}">Today</a>
+      </li>
+      <li th:class="${filter == 'week'}? 'active'">
+      <a href="#" th:href="@{${url}(filter='week')}">This Week</a>
+      </li>
+      <li th:class="${filter == 'all'}? 'active'">
+      <a href="#" th:href="@{${url}(filter='all')}">All</a>
+      </li>
+    </ul>
+    <table class="well table table-striped table-condensed table-hover">
+      <tr>
+        <th>Name</th>
+        <th>Time</th>
+        <th>Lecturer</th>
+        <th>Compulsory</th>
+        <th>Venue</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Duration</th>
+        <th>Reeated</th>
+        <th>Capacity</th>
+      </tr>
+      <tbody>
+      <tr th:each="s : ${sessions}">
+        <td th:text="${s.name}">name</td>
+        <td th:text="${s.time}">time</td>
+        <td th:text="${s.lecturer}">lecturer</td>
+        <td th:text="${s.compulsory}">compulsory</td>
+        <td th:text="${s.venue}">venue</td>
+        <td th:text="${s.startDate}">startDate</td>
+        <td th:text="${s.endDate}">endDate</td>
+        <td th:text="${s.duration}">duration</td>
+        <td th:text="${s.repeated}">repeated</td>
+        <td th:text="${s.maxCapacity}">maxCapacity</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 </body>
 </html>

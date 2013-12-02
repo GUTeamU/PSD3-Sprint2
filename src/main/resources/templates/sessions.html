@@ -1,13 +1,43 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-<title>Session List</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-</head>
-<body>
-<a href="createSession.html" th:href="@{'/admin/sessions/create'}">New Session</a>
-<ol th:each="s : ${sessions}">
-  <li><a href="session.html" th:href="@{'/admin/session?name='+${s.name}}" th:text="${s.name}">ourse name</a></li>
-</ol>
-</body>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="layout :: header"></head>
+    <body>
+        <div th:replace="layout :: navigation"></div>
+        <div class="container">
+            <div class="starter-template">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#" th:href="@{/admin/sessions}">List</a></li>
+                    <li><a href="#" th:href="@{/admin/sessions/create/}">Create</a></li>
+                </ul>
+                <table class="well table table-striped table-condensed table-hover">
+                    <tr>
+                        <th>Name</th>
+                        <th>Time</th>
+                        <th>Lecturer</th>
+                        <th>Compulsory</th>
+                        <th>Venue</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Duration</th>
+                        <th>Reeated</th>
+                        <th>Capacity</th>
+                    </tr>
+                    <tbody>
+                        <tr th:each="s : ${sessions}">
+                            <td th:text="${s.name}">name</td>
+                            <td th:text="${s.time}">time</td>
+                            <td th:text="${s.lecturer}">lecturer</td>
+                            <td th:text="${s.compulsory}">compulsory</td>
+                            <td th:text="${s.venue}">venue</td>
+                            <td th:text="${s.startDate}">startDate</td>
+                            <td th:text="${s.endDate}">endDate</td>
+                            <td th:text="${s.duration}">duration</td>
+                            <td th:text="${s.repeated}">repeated</td>
+                            <td th:text="${s.maxCapacity}">maxCapacity</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
 </html>

@@ -17,10 +17,11 @@ public class SessionController {
     private static final String SESSION_DATA = "Sessions.csv";
     
     private SessionList sessions;
-    private List<User> users;
+    private List<User> users = null;
         
     public SessionController() {
         this.sessions = new SessionList(SESSION_DATA);
+        users.add(new User(sessions, "Al"));
     }
 
     @RequestMapping("/admin/sessions")
@@ -40,9 +41,25 @@ public class SessionController {
         return "createSession";
     }
 
-    @RequestMapping("/user/sessions")
-    public String sessionList(@RequestParam(value="username") String username, Model model) {
-        return "userSessions";
+    @RequestMapping("/users/sessions")
+    public String sessionList(@RequestParam(value="username", required=false) String username, 
+                              @RequestParam(value="filter", required=false) String filter, 
+                              Model model) {
+        System.err.println("Test");
+        if(username != null && filter != null && users != null){
+            System.err.println("error");
+            System.err.println(username + ": " + filter + ": " + users);
+            for(User u: users){
+                if(u.equals(username)){
+                    List<Session> filtered = u.filter(filter);
+                    if(filtered != null){
+                        model.addAttribute("filter", filtered);
+                        return "userSessions";
+                    }
+                }
+            }
+        }
+        return "error";
     }
 
 

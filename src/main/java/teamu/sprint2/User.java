@@ -8,13 +8,13 @@ import java.util.ArrayList;
 
 public class User {
 	
-	private List<Session> sessions = new ArrayList<Session>();
-	private String name;
+	public List<Session> sessions = new ArrayList<Session>();
+	public String name;
 	
 	public User(List<Session> sessions, String name){
 		this.name = name;
 		for (Session session: sessions){
-			if (session.getCompulsory() == "1")
+			if (session.getCompulsory().equals("1"))
 				this.sessions.add(session);
 		}
 	}
@@ -22,18 +22,30 @@ public class User {
 	public User(SessionList sessions, String name){
 		this.name = name;
 		for (Session session: sessions.getAll()){
-			if (session.getCompulsory() == "1")
+			if (session.getCompulsory().equals("1"))
 				this.sessions.add(session);
 		}
 	}
 	
+	public String getName(){
+		return name;
+	}
+	
 	public List<Session> filter(String filter){
-		if(filter=="All")
+		System.err.println("Filter begin");
+		if(filter.equals("All")){
+			System.err.println("All:" + all());
 			return all();
-		if(filter=="Week")
+		}
+		if(filter.equals("Week")){
+			System.err.println("Week: " + week());
 			return week();
-		if(filter=="Today")
+		}
+		if(filter.equals("Today")){
+			System.err.println("Today: " + daily());
 			return daily();
+		}
+		System.err.println("Null filter");
 		return null;
 	}
 	

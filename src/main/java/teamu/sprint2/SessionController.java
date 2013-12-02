@@ -17,11 +17,12 @@ public class SessionController {
     private static final String SESSION_DATA = "Sessions.csv";
     
     private SessionList sessions;
-    private List<User> users = null;
+    private List<User> users;
         
     public SessionController() {
         this.sessions = new SessionList(SESSION_DATA);
-        users.add(new User(sessions, "Al"));
+        users = new ArrayList<User>();
+        this.users.add(new User(sessions, "Al"));
     }
 
     @RequestMapping("/admin/sessions")
@@ -50,12 +51,16 @@ public class SessionController {
             System.err.println("error");
             System.err.println(username + ": " + filter + ": " + users);
             for(User u: users){
-                if(u.equals(username)){
+                System.err.println(u.getName() + ": " + username + ": " + u.getName().equals(username));
+                if(u.getName().equals(username)){
                     List<Session> filtered = u.filter(filter);
+                    System.err.println(filtered);
                     if(filtered != null){
+                        System.err.println("Not null");
                         model.addAttribute("filter", filtered);
                         return "userSessions";
                     }
+                    System.err.println("After if");
                 }
             }
         }

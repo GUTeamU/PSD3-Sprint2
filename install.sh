@@ -11,7 +11,7 @@ fi
 MAVEN_VERSION=3.1.1
 MAVEN_DIR=apache-maven-$MAVEN_VERSION
 MAVEN_TAR=$MAVEN_DIR-bin.tar.gz
-MAVEN_URL=http://mirror.catn.com/pub/apache/maven/maven-3/$MAVEN_VERSION/binaries/$MAVEN_TAR
+MAVEN_URL=http://apache.mirrors.timporter.net/maven/maven-3/$MAVEN_VERSION/binaries/$MAVEN_TAR
 
 echo "### Installing Maven"
 rm -rf $MAVEN_TAR*
